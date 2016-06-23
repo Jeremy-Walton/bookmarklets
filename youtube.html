@@ -19,20 +19,13 @@
     </section>
 
     <section class='main-content'>
-      <p>All Bookmarklets are crunched with <a href="http://ted.mielczarek.org/code/mozilla/bookmarklet.html">Bookmarklet Cruncher</a></p>
-      <p>To add a bookmarklet, drag one of the links below to your bookmarks bar.</p>
-
-      <div class='bookmarklet-block'>
-        <h2>Gitlab Code Review Block Toggle</h2>
-        <a href='./gitlab.html'><img class='image-preview' src='./images/gitlab.gif' alt='Gitlab Gif' /></a>
-        <a id="codeOut" href="javascript:(function(){$('.diff-file').each(function(index,element){var id='toggle-'+index;element.id=id;var js=&quot;$('#&quot;+id+&quot; .diff-content').toggle();&quot;;var button='<button onClick=&quot;'+js+'&quot;>Toggle Visibility</button>';$(element).prepend(button);});$('.diff-file .diff-header span:first-child:not(.commit-short-id)').each(function(index,element){var text=$(element).text();if(text.substr(text.length-3)=='yml'){$(element).parent().next().addClass('cassette-toggle');}});var cassetteControl=&quot;$('.cassette-toggle').toggle()&quot;;var control=&quot;$('.diff-content')&quot;;var styles='position: fixed; left: 10px; z-index: 1000;';var cassetteButton='<button style=&quot;'+styles+'top: 10px;'+'&quot; onClick=&quot;'+cassetteControl+'&quot;>Toggle Cassettes (yml)</button>';var showButton='<button style=&quot;'+styles+'top: 35px;'+'&quot; onClick=&quot;'+control+'.show()'+'&quot;>Show All</button>';var hideButton='<button style=&quot;'+styles+'top: 60px;'+'&quot; onClick=&quot;'+control+'.hide()'+'&quot;>Hide All</button>';$('body').append(cassetteButton,showButton,hideButton);})();">Enable Code Block Toggle</a>
-      </div>
+      <a href='./index.html'>Home</a>
 
       <div class='bookmarklet-block'>
         <h2>Youtube Watch Later Time Calculator</h2>
-        <a href='./youtube.html'><img class='image-preview' src='./images/youtube.gif' alt='Youtube Gif' /></a>
         <a id="codeOut" href="javascript:(function(){var modulus=function(n,m){return((n%m)+m)%m;};var timer=function(){tag.innerText=tick+' '+baseText;tick--;if(tick>-1){setTimeout(timer,1000);}};var stamps=Array.prototype.slice.call(document.getElementsByClassName('timestamp'));var zeroDate=d2=new Date('Jun 22 2016 00:00:00');var sum=stamps.map(function(stamp){return stamp.children[0].innerText;}).map(function(time){if(time.length<6){time='00:'+time;}var date=new Date('Jun 22 2016 '+time);return(date.getTime()-zeroDate.getTime())/1000;}).reduce(function(a,b){return a+b;},0);var hours=modulus(parseInt(sum/3600),24);var minutes=modulus(parseInt(sum/60),60);var seconds=modulus(sum,60);var result=(hours<10?'0'+hours:hours)+':'+(minutes<10?'0'+minutes:minutes)+':'+(seconds<10?'0'+seconds:seconds);var tag=document.createElement('p');var baseText='Total Playlist time: '+result;tag.innerText=baseText;tag.style.cssText='position: fixed; left: 50%; top: 10px; z-index: 3000000000; padding: 10px; background-color: gray;';document.body.appendChild(tag);setTimeout(function(){document.body.removeChild(tag);},10000);var tick=10;timer();})();">Youtube Watch Later Calculator</a>
       </div>
+      <img src='./images/youtube.gif' alt='Youtube Gif' />
 
       <footer class='site-footer'>
         <span class='site-footer-owner'><a href='https://github.com/Jeremy-Walton/bookmarklets'>Bookmarklets</a> is maintained by <a href='https://github.com/Jeremy-Walton'>Jeremy-Walton</a>.</span>

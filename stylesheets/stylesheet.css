@@ -243,3 +243,14 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+.bookmarklet-block {
+  overflow: hidden;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.image-preview {
+  width: 50%;
+  float: left;
+}
