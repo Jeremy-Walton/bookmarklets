@@ -1,6 +1,0 @@
-{
-  "name": "Bookmarklets",
-  "tagline": "Simple but useful bookmarklets",
-  "body": "# Bookmarklets\r\n\r\nAll Bookmarklets are crunched with [Bookmarklet Cruncher](http://ted.mielczarek.org/code/mozilla/bookmarklet.html)\r\n\r\nTo add a bookmarklet, create a new bookmark and paste one of these as the link.\r\n\r\n## Gitlab Code Review Block Toggle\r\n\r\n`<a id=\"codeOut\" href=\"javascript:(function(){$('.diff-file').each(function(index,element){var id='toggle-'+index;element.id=id;var js=&quot;$('#&quot;+id+&quot; .diff-content').toggle();&quot;;var button='<button onClick=&quot;'+js+'&quot;>Toggle Visibility</button>';$(element).prepend(button);});})();\">Enable Code Block Toggle</a>`",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
