@@ -19,8 +19,16 @@
     </section>
 
     <section class='main-content'>
+      <h3>book·mark·let ˈbo͝okmärklət/</h3>
+      <p>a small software application stored as a bookmark in a web browser, which typically allows a user to interact with the currently loaded web page in some way.</p>
       <p>All Bookmarklets are crunched with <a href="http://ted.mielczarek.org/code/mozilla/bookmarklet.html">Bookmarklet Cruncher</a></p>
       <p>To add a bookmarklet, drag one of the links below to your bookmarks bar.</p>
+
+      <div class='bookmarklet-block'>
+        <h2>Youtube Watch Later Time Calculator 2.0</h2>
+        <a href='./youtube2.html'><img class='image-preview' src='./images/youtube2.png' alt='Youtube 2 Png' /></a>
+        <a id="codeOut" href="javascript:(function()%7Bvar modulus%3D(n,m)%3D>((n%25m)%2Bm)%25m%3Bvar parsedTime%3Dtime%3D>time<10%3F%270%27%2Btime:time%3Bvar calculateTime%3Darray%3D>%7Bconst totalTime%3Darray.reduce(function(runningTotal,div)%7Bconst text%3Ddiv.children%5B0%5D.children%5B1%5D.children%5B4%5D.textContent%3Bconst parts%3Dtext.split(%27:%27).map(part%3D>parseFloat(part))%3Bif(parts.length<3)%7Bparts.unshift(0)%7Dreturn runningTotal%2B(parts%5B0%5D*3600)%2B(parts%5B1%5D*60)%2Bparts%5B2%5D%3B%7D,0)%3Bconst hours%3Dmodulus(parseInt(totalTime/3600),24)%3Bconst minutes%3Dmodulus(parseInt(totalTime/60),60)%3Bconst seconds%3Dmodulus(totalTime,60)%3Breturn %60 %24%7BparsedTime(hours)%7D:%24%7BparsedTime(minutes)%7D:%24%7BparsedTime(seconds)%7D%60%3B%7D%3Bvar timer%3D()%3D>%7Btag.innerText%3D%60%24%7Btick%7D%24%7BbaseText%7D%60%3Btick--%3Bif(tick>-1)%7BsetTimeout(timer,1000)%3B%7D%7D%3Bvar divs%3DArray.from(document.getElementsByTagName(%27ytd-playlist-video-renderer%27))%3Bvar baseText%3D%60 Total Playlist Time:%24%7BcalculateTime(divs)%7D%60%3Bvar tag%3Ddocument.createElement(%27p%27)%3Btag.innerText%3DbaseText%3Btag.style.cssText%3D%27position: fixed%3B right: 50px%3B top: 120px%3B font-size: initial%3B padding: 10px%3B background-color: white%3B box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)%3B%27%3Bdocument.body.appendChild(tag)%3Bvar tick%3D5%3BsetTimeout(()%3D>%7Bdocument.body.removeChild(tag)%3B%7D,tick*1000)%3Btimer()%3B%7D)()%3B">Youtube Watch Later Calculator 2.0</a>
+      </div>
 
       <div class='bookmarklet-block'>
         <h2>Gitlab Code Review Block Toggle</h2>
