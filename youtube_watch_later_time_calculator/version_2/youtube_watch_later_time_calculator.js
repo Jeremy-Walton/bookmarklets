@@ -3,7 +3,7 @@ var parsedTime = time => time < 10 ? '0' + time : time;
 
 var calculateTime = array => {
   const totalTime = array.reduce(function(runningTotal, div) {
-    const text = div.children[0].children[1].children[4].textContent;
+    const text = div.children[0].textContent;
     const parts = text.split(':').map(part => parseFloat(part));
     if (parts.length < 3) { parts.unshift(0) }
     return runningTotal + (parts[0] * 3600) + (parts[1] * 60) + parts[2];
@@ -23,7 +23,7 @@ var timer = () => {
   }
 };
 
-var divs = Array.from(document.getElementsByTagName('ytd-playlist-video-renderer'));
+var divs = Array.from(document.getElementsByTagName('ytd-thumbnail-overlay-time-status-renderer'));
 var baseText = ` Total Playlist Time: ${calculateTime(divs)}`;
 var tag = document.createElement('p');
 tag.innerText = baseText;
